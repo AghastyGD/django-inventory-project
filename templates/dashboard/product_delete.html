@@ -1,0 +1,25 @@
+{% extends 'partials/base.html' %}
+{% block title %} Remoção de Produto {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="border bg-white p-3">
+                <h3>Delete Item</h3>
+                <hr>
+                <div class="alert alert-danger">
+                    <h4>Tem certeza que você quer apagar?</h4>
+                </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <a class="btn btn-secondary" href="{% url 'dashboard-product' %}">Cancelar</a>
+                    <input class="btn btn-danger" type="submit" value="Confirmar">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
