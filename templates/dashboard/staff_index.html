@@ -1,14 +1,17 @@
+{% load crispy_forms_tags %}
 <div class="container">
     <div class="row mt-4">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
-                    Make Request
+                    Faca o seu pedido
                 </div>
                 <div class="card-body">
                     <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
                         
-                        <input class="btn btn-info btn-block" type="submit" value="Make Request">
+                        <input class="btn btn-info btn-block" type="submit" value="Fazer um Pedido">
                     </form>
                 </div>
             </div>
@@ -16,7 +19,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Orders Records
+                    Registro de Pedidos
                 </div>
                 <div class="card-body">
                     <table class="table bg-white">
@@ -25,31 +28,20 @@
                                 <th scope="col">Product</th>
                                 <th scope="col">Category</th>
                                 <th scope="col">Quantity</th>
+                                <th scope="col">Date</th>
                             </tr>
                         </thead>
                         <tbody>
-                            
+                            {% for order in orders %}
+                            {% if order.staff == user %}
                             <tr>
-                                <td>Book</td>
-                                <td>Stationary</td>
-                                <td>10</td>
+                                <td>{{ order.product.name }}</td>
+                                <td>{{ order.product.category }}</td>
+                                <td>{{ orders.order_quantity }}</td>
+                                <td>{{ orders.date }}</td>
                             </tr>
-							<tr>
-                                <td>Book</td>
-                                <td>Stationary</td>
-                                <td>10</td>
-                            </tr>
-							<tr>
-                                <td>Book</td>
-                                <td>Stationary</td>
-                                <td>10</td>
-                            </tr>
-							<tr>
-                                <td>Book</td>
-                                <td>Stationary</td>
-                                <td>10</td>
-                            </tr>
-                            
+                            {% endif %}
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
