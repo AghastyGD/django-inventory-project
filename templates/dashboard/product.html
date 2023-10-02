@@ -9,6 +9,13 @@
 <div class="container">
     <div class="row my-4">
         <div class="col-md-4">
+            {% for message in messages %}
+            {% if message %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endif %}
+            {% endfor %}
             <div class="border bg-white p-3">
                 <h4>Add Products</h4>
                 <hr>

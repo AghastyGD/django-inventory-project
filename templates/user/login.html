@@ -6,6 +6,13 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">  
+                {% for message in messages %}
+                {% if message %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+                {% endif %}
+                {% endfor %}
                 <div class="border p-3 bg-white">
                     <h3>Login Page</h3>
                     <hr>

@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm, UserUpdateForm,ProfileUpdateForm
+from django.contrib import messages
 
 def register(request):
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
+            user_name = form.cleaned_data.get('username')
+            messages.success(request, f'Contra criada com sucesso para o usuário: {user_name}. Faça o seu login para continuar')
             return redirect('user-login')
     else:
         form= CreateUserForm()
