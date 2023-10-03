@@ -41,10 +41,10 @@ Este é um sistema de inventário desenvolvido em Django que permite a gestão d
 
 
 ## Adicionar Produto
-![Adicionar Produto](./demo_images/demo_2.PNG)
+<img src="./demo_images/demo_2.PNG" width="470" height="320">
 
 ## Fazer um Pedido
-![Fazer um Pedido](./demo_images/demo_3.PNG)
+<img src="./demo_images/demo_3.PNG" width="470" height="320">
 
 
 
