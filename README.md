@@ -36,7 +36,7 @@ Este é um sistema de inventário desenvolvido em Django que permite a gestão d
 4. Os usuários podem se registrar e fazer pedidos a partir da página principal.
 
 ## Monitoramento de Pedidos e Produtos
-<img src="./demo_images/demo_1.PNG" width="150" height="280">
+<img src="./demo_images/demo_1.PNG" width="300" height="300">
 
 
 
