@@ -35,8 +35,13 @@ Este é um sistema de inventário desenvolvido em Django que permite a gestão d
 3. Tela de Dasboard: A tela de dashboard oferece uma visualização completa das informações do sistema em gráficos interativos usando Chart.js. Para acessá-la: `http://127.0.0.1:8000/dashboard`.
 4. Os usuários podem se registrar e fazer pedidos a partir da página principal.
 
+## Monitoramento de Pedidos e Produtos
 ![Monitoramento de Pedidos e Produtos](./demo_images/demo_1.PNG)
+
+## Adicionar Produto
 ![Adicionar Produto](./demo_images/demo_2.PNG)
+
+## Fazer um Pedido
 ![Fazer um Pedido](./demo_images/demo_3.PNG)
 
 
