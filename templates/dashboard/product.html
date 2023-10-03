@@ -17,13 +17,13 @@
             {% endif %}
             {% endfor %}
             <div class="border bg-white p-3">
-                <h4>Add Products</h4>
+                <h4>Adicionar Produto</h4>
                 <hr>
                 <form method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
 
-                    <input class="btn btn-success btn-block" type="submit" value="Add Product">
+                    <input class="btn btn-success btn-block" type="submit" value="Adicionar Produto">
 
                 </form>
             </div>
@@ -32,10 +32,10 @@
             <table class="table bg-white">
                 <thead class="bg-info">
                     <tr class="text-white">
-                        <th scope="col">Name</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Activity</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Atividade</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,8 +45,8 @@
                         <td>{{ item.category }}</td>
                         <td>{{ item.quantity }}</td>
                         <td>
-                            <a class="btn btn-info btn-sm" href="{% url 'dashboard-product-update' item.id %}">Edit</a>
-                            <a class="btn btn-danger btn-sm" href="{% url 'dashboard-product-delete' item.id %}">Delete</a>
+                            <a class="btn btn-info btn-sm" href="{% url 'dashboard-product-update' item.id %}">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="{% url 'dashboard-product-delete' item.id %}">Apagar</a>
                         </td>
                     </tr>
                     {% endfor %}

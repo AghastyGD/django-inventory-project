@@ -11,18 +11,18 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header bg-info text-white">
-                    Profile Page
+                    Página de Perfil
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-8">
-                            <span class="h4"> Informacoes do Perfil </span> <a class="btn btn-info btn-sm float-right"
-                                href="{% url 'user-profile-update' %}">Edit</a>
+                            <span class="h4"> Informacões do Perfil </span> <a class="btn btn-info btn-sm float-right"
+                                href="{% url 'user-profile-update' %}">Editar</a>
                             <hr>
                             <table class="table bg-white table-borderless">
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Name</th>
+                                        <th scope="row">Nome</th>
                                         <td>{{ user.username }}</td>
                                     </tr>
                                     <tr>
@@ -30,11 +30,11 @@
                                         <td>{{ user.email }}</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Phone</th>
+                                        <th scope="row">Telefone</th>
                                         <td>{{ user.profile.phone }}</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Address</th>
+                                        <th scope="row">Endereço</th>
                                         <td>{{ user.profile.address }}</td>
                                     </tr>
                                 </tbody>
@@ -53,7 +53,4 @@
 
 </div>
 
-
-
-<!--End Table-->
 {% endblock %}

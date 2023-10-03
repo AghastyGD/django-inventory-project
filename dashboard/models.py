@@ -2,9 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 
 CATEGORY = (
-    ('Stationay', 'Stationary'),
-    ('Electronics', 'Electronics'),
-    ('Food', 'Food'),
+    ('Electrônicos', 'Eletrônicos'),
+    ('Comida', 'Comida'),
+    ('Livros', 'Livros'),
+    ('Imovéis', 'Imovéis'),
 )
 
 class Product(models.Model):
@@ -13,7 +14,7 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(null=True)
 
     class Meta:
-        verbose_name_plural = 'Product'
+        verbose_name_plural = 'Produto'
 
     def __str__(self):
         return f'{self.name}: {self.quantity}'

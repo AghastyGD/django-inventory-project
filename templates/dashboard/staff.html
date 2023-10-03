@@ -12,19 +12,19 @@
             <table class="table bg-white">
                 <thead class="bg-info">
                     <tr class="text-white">
-                        <th scope="col"></th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Nome</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for worker in workers %}
                     <tr>
-                        <th scope="row"><a class="btn btn-info btn-sm" href="{% url 'dashboard-staff-detail' worker.id %}">View</a></th>
                         <td>{{ worker.username }}</td>
                         <td>{{ worker.email }}</td>
                         <td>{{ worker.profile.phone }}</td>
+                        <th scope="row"><a class="btn btn-info btn-sm" href="{% url 'dashboard-staff-detail' worker.id %}">Ver Mais</a></th>
                     </tr>
                     {% endfor %}
                 </tbody>

@@ -14,11 +14,11 @@
             <table class="table bg-white">
                 <thead class="bg-info">
                     <tr class="text-white">
-                        <th scope="col">Product</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Order by</th>
-                        <th scope="col">Date</th>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Pedido por</th>
+                        <th scope="col">Data</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,7 +31,7 @@
                             {{ orders.staff.username }}
                         </td>
                         <td>
-                            {{ orders.date }}
+                            {{ orders.date|truncatechars:15 }}
                         </td>
                     </tr>
                     {% endfor %}
