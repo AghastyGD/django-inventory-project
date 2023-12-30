@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from mini_shop.views import order_minishop
 
 urlpatterns = [
     path('dashboard/', views.index, name='dashboard-index'),
@@ -10,3 +11,5 @@ urlpatterns = [
     path('product/update/<int:pk>/', views.product_update, name='dashboard-product-update'),
     path('order/', views.order, name='dashboard-order'),
 ]
+
+

@@ -1,0 +1,45 @@
+{% extends 'partials/base.html' %}
+{% block title %} Pedidos - MiniShop {% endblock %}
+
+{% block content %}
+
+{% include 'partials/topnav.html' %}
+ <!--Table-->
+ <div class="container">
+    <div class="row my-4">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-8">
+            <table class="table bg-white">
+                <thead class="bg-info">
+                    <tr class="text-white">
+                        <th scope="col">Produto</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Pedido por</th>
+                        <th scope="col">Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for orders in orders %}
+                    <tr>
+                        <td>{{ orders.product }}
+                        <td>{{ orders.product.category }}</td>
+                        <td>{{ orders.order_quantity }}</td>
+                        <td>
+                            {{ orders.staff.username }}
+                        </td>
+                        <td>
+                            {{ orders.date|truncatechars:15 }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
