@@ -22,11 +22,19 @@ Este é um sistema de inventário desenvolvido em Django que permite a gestão d
 
 1. Clone este repositório.
 2. Crie um ambiente virtual e ative-o.
-3. Instale as dependências usando `pip install -r requirements.txt`.
-4. Configure o arquivo `settings.py` com suas configurações de banco de dados.
-5. Execute as migrações: `python manage.py migrate`.
-6. Crie um superusuário para acesso ao painel de administração: `python manage.py createsuperuser`.
-7. Inicie o servidor de desenvolvimento: `python manage.py runserver`.
+3. **Importante** - Crie um arquivo  **.env** no diretorio ./inventory-project com as seguintes variaveis:
+```env
+EMAIL_HOST: ""
+EMAIL_PORT: ""
+EMAIL_USE_TLS: ""
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
+```
+4. Instale as dependências usando `pip install -r requirements.txt`.
+5. Configure o arquivo `settings.py` com suas configurações de banco de dados.
+6. Execute as migrações: `python manage.py migrate`.
+7. Crie um superusuário para acesso ao painel de administração: `python manage.py createsuperuser`.
+8. Inicie o servidor de desenvolvimento: `python manage.py runserver`.
 
 ## Uso
 
