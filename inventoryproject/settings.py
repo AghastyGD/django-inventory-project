@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-y@@vxte65#)ofgpp3mveg%*e@@r*bp2oit3*4)9b8w=8*#2l13
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '192.168.84.79', '192.168.84.10']
+ALLOWED_HOSTS = ['localhost', '.vercel.app']
 
 
 # Application definition
@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'inventoryproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASS'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 
