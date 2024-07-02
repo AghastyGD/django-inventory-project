@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "MozTeekBlog/wsgi.py"
+        "dest": "inventoryproject/wsgi.py"
       }
     ]
   }
