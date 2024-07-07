@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -111,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-# Internationalization
+# Internationalizatio
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 LANGUAGE_CODE = 'pt-br'
@@ -130,9 +131,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "asert", "static")
+STATIC_ROOT = (BASE_DIR/"asert/")
 
 MEDIA_ROOT = (BASE_DIR/'media')
 
